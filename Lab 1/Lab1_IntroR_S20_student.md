@@ -97,15 +97,18 @@ The answer in 2.2 is Nan or Not A Number. This is because of blanks in the recor
 
 ```python
 cleanedset = curry.values.tolist()
+rmarr = list()
 for i in range(len(cleanedset)):
     if math.isnan(cleanedset[i][1]):
-        cleanedset[i][1] = 0
+        rmarr.append(i-len(rmarr))
+for i in rmarr:
+    cleanedset.pop(i)
 curry = pd.DataFrame(cleanedset,columns=["Game","Point"])
 cleanedset
 ```
 
 Insert answer here
-28.963414634146343
+30.063291139240505
 
 
 2.5. Correct the following codes so that they do not return errors.
