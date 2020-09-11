@@ -255,7 +255,7 @@ Insert answer here.
 4.3. Which sex had the highest adult population size? Use the function `max()` (uses the forumula template) to answer this question.
 
 ```python
-max(avgMalePop,sum(bison.Female)/len(bison.Male))
+max(avgMalePop,sum(bison.Female)/len(bison.Female))
 ```
 
 Insert answer here.
@@ -280,6 +280,7 @@ population = bison.values.tolist()
 for i in range(len(population)):
     population[i].append(sum([population[i][1],population[i][2],population[i][3]]))
 bison = pd.DataFrame(population,columns=["Year","Male","Female","Juveniles","Total"])
+bison
 ```
 
 
