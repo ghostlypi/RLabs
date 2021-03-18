@@ -67,7 +67,7 @@ A person's muscle mass is expected to decrease with age. To explore this relatio
 1.a State the statistical research question for your analysis. 
 
 > Insert answer here
-What linear impact does a woman's age have upon their muscle mass?
+Does a woman's age have a negative effect upon their muscle mass?
 
 
 1.b Name the response variable of interest and state the type (quantitative or qualitative).  Always include your units!
@@ -99,7 +99,7 @@ Note: The AP exam and your Ti calculators use   $$Y_{muscle~mass} = A + B \cdot 
 1.e **When doing statistical inference it's very important to always check your assumptions/conditions to make sure the model you're using to approximate your data is an appropriate one.**  What assumption are we making about the independent and dependent variables by using this particular linear regression? Hint:  What are we choosing to be our explanatory variable and is this reasonable?
 
 > Insert your answer here
-
+Age is the explanator variable, this is reasonable because we are assuming that people are not making any drastic lifestyle changes that will impact their muscle mass.
 
 1.f*(optional)* State the null and alternative hypothesis both symbolically and verbally to test the slope of the linear regression, given our expected association (i.e., the research objective). Fill in the blanks below as needed to complete the hypotheses.  
 
@@ -159,20 +159,20 @@ stats.probplot(x, plot=plt)
 ```
 
 TRUE or FALSE? The assumption of linearity seems reasonable.  
-> Plot used: 
-> Justification: 
+> Plot used: Linear Regression
+> Justification: The r^2 value is close to 1.
 
 TRUE or FALSE? The assumption of normally distributed error seems reasonable.  
 > Plot used: QQ plot
 > Justification: The ordered values are very close to the expected values except on both ends.
 
 TRUE or FALSE? The assumption of equal error variance (homoscedacity) seems reasonable.  
-> Plot used:  
-> Justification: 
+> Plot used:  Linear Regression
+> Justification: There are a roughly equal number of values above and below the plot.
 
 TRUE or FALSE? The assumption of the independence of the residuals seems reasonable.  
-> Plot used:  
-> Justification:  
+> Plot used:  Fitted v. Residuals.
+> Justification: There is no discernable pattern as we move along the X axis. 
 
 1.i After checking that we can use a model for the null distribution (i.e.the T-Distributiion to get a t-statistic and p-value calculation), we should also check that our estimates are not unduly influenced by any points (outliers, high leverage or influential points). 
 
@@ -236,7 +236,7 @@ smfr
 
 
 1.n Assess the strength of the relationship using the coefficient of determination. Is age a good predictor of muscle mass?
-> The strength of this relationship is very strong since the r^2 value is verhy high.
+> The strength of this relationship is very strong since the r^2 value is very high.
 
 
 1.o Determine the 95% confidence interval for the slope of the regression line. Modify the code below to determine the interval, then interpret it in context below.  
@@ -261,10 +261,14 @@ print(-1.19-57*1.677)
 
 > Fill in the blanks below for our general confidence interval interpretation for linear regression.  
 
-Based on our sample, we are 95% confident that the true value of the linear regression between 40 and 90 is between -96.779 and 94.399. 
+Based on our sample, we are 95% confident that the true value of the linear regression between 40 and 90 is between -1.37 and -1.01. 
 
 
-1.p Modify the code below to perform a power analysis for your regression model, using an effect size of 0.15 (medium effect size, see below for more info) and significance level of 0.05 (This means your Confidence Level is 95% because they both must sum to 1).  
+1.p Modify the code below to perform a power analysis for your regression model, using an effect size of 0.15 (medium effect size, see below for more info) and significance level of 0.05 (This means your Confidence Level is 95% because they both must sum to 1).
+
+```avg = mean(muscle.MuscleMass.tolist())
+
+TTestPower().power(effect_size = 0.15, nobs = 59, alpha = 0.05, df=57)
 
 # Interpret your power analysis below.  
 
@@ -316,7 +320,7 @@ Researchers conducted a postmortem study of 144 adult domestic cats (over 2kg in
 
 2.a State the statistical research question of this analysis.
 
-> Is there a linear relationship between body weigh and heart weight?
+> Is there a linear relationship between body weight and heart weight?
 
 
 2.b Identify the variable type by completing the table below by filling in the blanks
@@ -350,7 +354,7 @@ avg = mean(cats.Hwt.tolist())
 FTestPower().power(effect_size = 0.15, df_num = 1, df_denom = 139, alpha = 0.05)
 ```
 
-> We have enough power (over 80%) to detect a true alternative with an effect size of 0.15.  
+> ***We have enough power (over 80%) to detect a true alternative with an effect size of 0.15.***  
 
 > We do not have enough power (<80%) to detect a true alternative with an effect size of 0.15.
 
@@ -442,12 +446,12 @@ mcats
 > $H_{0,~males}$: $\beta_{1,~males} = 0$  
 > The true slope of a linear relationship between heart weight (g) and body weight for adult male domestic cats is zero.
 > $H_{1,~male}$:  $\beta_{1,~males} != 0$
-> The true slope of a linear relationship between heart weight (g) and body weight for adult male domesitc cats i not zero.
+> The true slope of a linear relationship between heart weight (g) and body weight for adult male domesitc cats is positive.
 
 > $H_{0,~females}$: $\beta_{1,~females} = 0$  
 > The true slope of a linear relationship between heart weight (g) and body weight for adult female domestic cats is zero.
 > $H_{1,~female}$:  $\beta_{1,~females} != 0$
-> The true slope of a linear relationship between heart weight (g) and body weight for adult female domesitc cats i not zero.
+> The true slope of a linear relationship between heart weight (g) and body weight for adult female domesitc cats is positive.
 
 
 2.i Assess whether the parametric conditions of linear regression have been satisfied, for sex group (males, females); include any guidelines we should also check for our analyses. Modify the code to create the appropriate graphics. **For each group**, state the condition, the plot you used as evidence, then whether it has been satisfied. Give a **brief** justification of your decision.  Note in the code below how to subset your data set into Males and Females.
@@ -599,13 +603,13 @@ I would not trust the results because the r^2 values are relativly low.
 2.p Can we determine if body weight **caused** the heart weight in a cat? Explain why or why not with statistical reasoning. 
 
 > Insert your answer here.
-The T-test establishes a value less than 0.05 allowing us to reject the null ghypothesis, however our r^2 values are rather low.
+Since this was an observational study we cannot detemine if the bodyweight of the cat caused the heart weight in the cats.
 
 2.q Can we **generalize** our results to all adult cats with congestive heart failure? Explain why or why not with statistical reasoning. 
 
 > Insert your answer here.
 
-It seems likely since we had a random sample we can generalize the results to all adult cats.
+It seems likely since we did not have a random sample we cannot generalize the results to all adult cats.
 
 
 ***
@@ -639,13 +643,13 @@ smfr = infl.summary_frame()
 smfr
 ```
 
-Condition                | Plot            | Satisfied or Violated?  | Justification
--------------------------|-----------------|-------------------------|-------------------
-Linearity                |Linear Regression|Satisfied                |
-                         |                 |                         |
-                         |                 |                         |
-                         |                 |                         |
-                         |                 |                         |
+Condition                | Plot             | Satisfied or Violated?  | Justification
+-------------------------|------------------|-------------------------|-------------------
+Linearity                |Normal Linear Reg |Satisfied                |There appearse to be a strong linear association between discharge and sediment levels.
+Normality of Residuals   |QQPlot  |Satisfied               | The values tend to follow the predicted values indicating that the residuals are normal.
+Constant variance of residuals |Residual V Fitted  |Satisfied        | There is equal variance on either side of the line.
+Independence of residuals      |Residual V Leverage|Violated         | There is a much denser cluster of points to the left of the graph indicating that the residuals are not independent.
+No Influential Points with Cooks Distabce beyond CD=1 |Redidual V Fitted  |Satisfied | There are no values with a Cooks Distance greater than 1.
 
 Hint: one or two or the above conditions should not be satisfied (you should be able to tell from your diagnostic plots)    
 
@@ -671,14 +675,13 @@ plot(transformed model, ___)
 plot(transformed model, ___)
 ```
 
-Condition                       | Plot            | Satisfied or Violated?  | Justification
---------------------------------|-----------------|-------------------------|-------------------
- Linearity                      |                 |                         |
- Normality of Residuals         |                 |                         |
- Constant variance of residuals |                 |                         |
- Independence of residuals      |                 |                         |
- No Influential Points          |                 |                         |
- no value beyond CD=1
+Condition                       | Plot              | Satisfied or Violated?  | Justification
+--------------------------------|-------------------|-------------------------|-------------------
+ Linearity                      |Normal Linear Reg  |Satisfied                |The values appear to follow the regression line quite closely.
+ Normality of Residuals         |QQPlot             |Satisfied                |The values tend to follow the predicted values indicating that the residuals are normal. 
+ Constant variance of residuals |Residual V Fitted  |Satisfied                |The values appear to vary equally on both sided of the regression.
+ Independence of residuals      |Residual V Leverage|Satisfied                 |The values seem to follow a normal distribution indicating that they are independent.
+ No Influential Points          |Redidual V Fitted  |Satisfied                 |There are no values of CD > 1.
 
 
 Take-home message: Sometimes, the linear model assumptions are satisfied after taking an appropriate transformation of the explanatory variable and/or the response variable. In the data (salinas.csv), the log-base-10-transformation on the explanatory variable led to satisfying linear model assumptions.  If you want you could now proceed with your statistical inference using the t-distribution as our probability distribution (density curve) to calculate a p-value
