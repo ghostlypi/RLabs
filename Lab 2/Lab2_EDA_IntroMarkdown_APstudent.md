@@ -102,7 +102,7 @@ vartype(shutdown.values)
 > Variable: Type -- Justification   
 > (remember to put two spaces after each line to force a line break. You will also need to start each new line with a `>` to denote a continued answer.)  
 
-    The Year and the length are both quantitative, but President & Month Start are both quantitative.
+    The Year and the length are both quantitative, but President & Month Start are both qualitative.
 
 
 2c: Modify the code below to calculate the mean and standard deviation of the number of days federal shutdowns last by replacing any blanks with the appropriate code. Remember you need to load the `mosaic` package first before we calculate these statistics (you should get in the habit of just doing this once each time you start a lab at the top as well as ggformula). You can install this package (which you have to do before requiring it) either through the console using install.packages or by using the packages tab on the right side of rstudio.  *Hint:  we always put the numeric variable we're computing stats on after the tilda (~) and the name of the dataframe you're using that has the variables and data in it after data =*
@@ -135,7 +135,7 @@ len(shutdowns)
 2f: Compare your two measures of center. What can you determine about the shape of the data from this comparison? Make sure to include your justification.
 
 > Insert your answer below.
-The mean is much higher than the median and the Standard deviation is higher than the IQR indicating the presence of high outliers.
+The mean is much higher than the median and the Standard deviation is higher than the IQR indicating the presence of high outliers. The graph is left skewed supporting our hypothesis.
 
 
 2g: Let's create a histogram of the length of government shutdowns by modifying the code below to see if it agrees with what you said above.  
@@ -330,7 +330,7 @@ This study is observational since the data available is all that is there. The e
 4c: Describe the sampling method Abhi used to select his sample.
 
 > Provide an answer and justification below.
-He selected a specific subset of the sample (NFL teams).
+Abhi used a convinenece sample of teams that have won the Superbowl.
 
 
 4d: What type of variable is recorded in `SuperBowl_lastwin`? 

@@ -53,7 +53,7 @@ For all multiple choice questions, **bold** (or __bold__) your answers but do no
 
   a. all drifting *D. antarctica* in the Canterbury Bight  
   b. all beach-cast *D. antarctica* in New Zealand 
-  c. all beach-cast *D. antarctica* in the Canterbury Bight  
+  **c. all beach-cast *D. antarctica* in the Canterbury Bight**  
   d. all *D. antartctica* in the Canterbury Bight
 
 
@@ -62,26 +62,26 @@ For all multiple choice questions, **bold** (or __bold__) your answers but do no
   a. one *D. antarctica*  
   b. one month
   c. one coastline  
-  d. one field site  
+  **d. one field site**  
 
 
 1c: What type of sample design did the researchers employ?
 
   a. Stratified Random Sample  
   b. Simple Random Sample  
-  c. Convenience Sample  
+  **c. Convenience Sample**  
   d. Volunteer Sample
 
 
 1d: Biological studies can't always use a SRS like other fields, as they often don't have a sampling frame. How could the researchers introduce randomization into their study (what could they physically do while collecting the kelp on the beach to collect it in a random way)?
 
-> Insert your answer below.
+> They can sample on different days to 
 
 
 
 1e: If the researchers assumed that the kelp on the beach was already a random sample of the kelp drifting in the ocean, would that satisfy you that they could generalize their sample to the population? Why or why not?
 
-> Insert your answer below.
+> No, the kelp that drift to land might have been affected by an external factor such as proximity to land and cannot be compared with ocean kelp.
 
 
 
@@ -91,26 +91,26 @@ For all multiple choice questions, **bold** (or __bold__) your answers but do no
 
 2a: Define the following terms in *general* (not just for this kelp study):
 
-> Population distribution:  
+> Population distribution:  The distribution of the entire population of individuals.
 
 
-> Sample distribution:  
+> Sample distribution: The distribution of the sample collected
 
 
-> Sampling distribution:  
+> Sampling distribution:  The diversity of the sample collected.
 
 
 2b: Describe the following characteristics for the sampling distribution, being as specific as you can for a *general* sampling distribution (not just for this kelp study), use the appropriate greek letters and subscripts:
 
 Hint: Here are the symbols and words you should use (remember you can hover over them): $\mu_{\bar{x}}=\mu$, $\sigma_{\bar{x}}=\sigma/\sqrt{n}$, symmetric, unimodal, bell-shaped; normal 
 
-> Center: 
+> Center: $\mu_{\bar{x}}=\mu$ The center is a measure of the average of the individuals within a 
 
 
-> Spread: 
+> Spread: $\sigma_{\bar{x}}=\sigma/\sqrt{n}$ The spread is a measure of how far data is from the center.
 
 
-> Shape:  
+> Shape:  Is the distribution of data points. Things ot consider include:"Is the graph symetrical?", "Is the graph unimodal(1 peak), bimodal(2 peaks) or polymodal(multiple peaks)", "What is the shape? is it bell shaped, skewed left, or skewed right?", and "Is it normal, binomial?"
 
 
 2c: Why is there variation around the center of the sampling distribution in *general*?  Think about how samples vary, and what this means for the sample means that make up the sampling distribution of the sample means and how the size of our sample effects the variability and how well our sample will represent the true population and how different samples make our estimates (statistics) of the population (parameters) better or worse.
