@@ -59,10 +59,10 @@ For all multiple choice questions, **bold** (or __bold__) your answers but do no
 
 1b: What is one case in this study?
 
-  a. one *D. antarctica*  
+  **a. one *D. antarctica***  
   b. one month
   c. one coastline  
-  **d. one field site**  
+  d. one field site  
 
 
 1c: What type of sample design did the researchers employ?
@@ -75,7 +75,7 @@ For all multiple choice questions, **bold** (or __bold__) your answers but do no
 
 1d: Biological studies can't always use a SRS like other fields, as they often don't have a sampling frame. How could the researchers introduce randomization into their study (what could they physically do while collecting the kelp on the beach to collect it in a random way)?
 
-> They can sample on different days to 
+> The randomly select different section of each field site for sampling.
 
 
 
@@ -97,14 +97,14 @@ For all multiple choice questions, **bold** (or __bold__) your answers but do no
 > Sample distribution: The distribution of the sample collected
 
 
-> Sampling distribution:  The diversity of the sample collected.
+> Sampling distribution:  The distribution of the estimates of the true value of the population.
 
 
 2b: Describe the following characteristics for the sampling distribution, being as specific as you can for a *general* sampling distribution (not just for this kelp study), use the appropriate greek letters and subscripts:
 
 Hint: Here are the symbols and words you should use (remember you can hover over them): $\mu_{\bar{x}}=\mu$, $\sigma_{\bar{x}}=\sigma/\sqrt{n}$, symmetric, unimodal, bell-shaped; normal 
 
-> Center: $\mu_{\bar{x}}=\mu$ The center is a measure of the average of the individuals within a 
+> Center: $\mu_{\bar{x}}=\mu$ The center is a measure of the average of the individuals within a population.
 
 
 > Spread: $\sigma_{\bar{x}}=\sigma/\sqrt{n}$ The spread is a measure of how far data is from the center.
@@ -116,13 +116,13 @@ Hint: Here are the symbols and words you should use (remember you can hover over
 2c: Why is there variation around the center of the sampling distribution in *general*?  Think about how samples vary, and what this means for the sample means that make up the sampling distribution of the sample means and how the size of our sample effects the variability and how well our sample will represent the true population and how different samples make our estimates (statistics) of the population (parameters) better or worse.
 
 > Insert your answer below.
-
+Since we do not know the true population of the sample, we must make an estimate. Naturally, our estimates will vary since we cannot know if they are correct or not without knowing the true population.
 
 
 2d: How Does/Doesn't the underlying population (the population from which you are taking samples) distribution affect the sampling distribution center? Explain why this is so.
 
 > Insert your answer below.
-
+The value of the population should match with the center of the population distribution if we sampled the population correctly. The center of the distribution might not match the population value if we did not get a representative sample of the population.
 
 
 2e: In the table below fill in the values in the last column to get practice calculating the standard error for a sampling distribution and to see how the sample size effects the standard error (spread/variability). The population standard deviations is given below. 
@@ -136,10 +136,10 @@ Population standard deviation: $\sigma_{1}=1.51$; Goal here is to see how the th
 
 |     n     |   $\mu_{\bar{x}}$  |  $\sigma_{\bar{x}}$  |  $\sigma/\sqrt{n}$  |
 |:---------:|:------------------:|:--------------------:|:-------------------:|
-|  10       |        7.978       |     0.481            |                     |
-|  50       |        7.997       |     0.215            |                     |
-|  100      |        7.998       |     0.152            |                     |
-|  1000     |        7.999       |     0.047            |                     |
+|  10       |        7.978       |     0.481            |       0.1521        |
+|  50       |        7.997       |     0.215            |       0.0043        |
+|  100      |        7.998       |     0.152            |       0.0152        |
+|  1000     |        7.999       |     0.047            |       0.0015        |
   
 
 
@@ -147,7 +147,7 @@ Population standard deviation: $\sigma_{1}=1.51$; Goal here is to see how the th
 
 > Insert your answer below.
 
-
+There is a massive difference indicating that the sample population is not a representative sample of the population as a whole.
 
 ***
 
@@ -163,37 +163,71 @@ Go to http://www.rossmanchance.com/ISIapplets.html
 - Click 'one mean', then select 'pennies', select at least a sample size of 30
 
 > Insert your answer below.
-
+ID	Age
+1	4
+2	15
+3	29
+4	14
+5	8
+6	16
+7	10
+8	11
+9	4
+10	7
+11	12
+12	5
+13	18
+14	12
+15	8
+16	19
+17	5
+18	4
+19	20
+20	30
+21	4
+22	14
+23	15
+24	3
+25	7
+26	17
+27	2
+28	2
+29	17
+30	20
 
 
 3b: Make a vector of your data and store it as `age` in the code chunk below. If you don't recall how to use the function `c()`.  *Note* change the name of the vector from 'age' to something appropriate if you aren't using coins.  Example:  Your vector below shoud look something like age<-c(0,0,1,2,2,13,14,14,21, ...,41) if using coins where 0 represents a coin from 2019, 1 represents a coin from 2018, etc.
 
-```{r}
-age<-c(_____)
+```{python}
+age=[4,15,29,14,8,16,10,11,4,7,12,5,18,12,8,19,5,4,20,30,4,14,15,3,7,17,2,2,17,20]
 ```
 
 3c: What type of sample did you take?
 
 > Insert your answer below.
-
+A simple random sample.
 
 
 3d: What is the population of interest in this scenario?
 
 > Insert your answer below.
 
-
+All the coins in the United States
 
 3e: Create a histogram and then a boxplot of your sample distribution, making sure to label it appropriately.
 
 **Add code chunk here, and use the gf_histogram() and gf_boxplot() function we've used before, make sure to label axes appropriately and specifically always!**
 
+```{python}
+age=pd.DataFrame(age,columns="age")
+age.hist(column="age",bins=7)
+```
 
 
 3f: Describe your distribution, discussing the four characteristics of shape, center, spread, and outliers. 
 
 > Insert your answer below.
-
+The distribution is unimodal skewed left with a mean of 11.7333 and a standard deviation of 7.5152 and no outliers.
 
 
 3g: Calculate the descriptive numerical summaries to best quantify your distribution's center and spread (will depend on if your distribution is approx. symmetric or skewed on what stats you use) . Write the values below using symbolic notation (e.g.: symbol = value). 
@@ -202,22 +236,27 @@ age<-c(_____)
 
 > Insert your answer below.
 
-
+min = 2
+q1 = 5
+med = 12
+q3 = 17
+max = 30
 
 3h: Regardless of what you calculated in 3g, calculate the mean $\bar{x}$, standard deviation $s$, and sample size $n$ of your data, using R code for all three. Write the values below in the green section after you plug your varible name into the functions in the code chunk below to calculate the values. 
 
 **insert into code chunk below**
-```{r}
-mean(~_______)  
-sd(~_______)  
-length(______)  
-
+```{python}
+mean(age)  
+stdev(age)  
+len(age)  
 ```
 
 
 > Insert your answer below.
 
-
+mean = 11.733333333333333
+stdev = 7.515195334756126
+len = 30
 
 3i: Fill in the blank, bolding the words you enter in the blanks. 
 
@@ -237,46 +276,47 @@ In 1999, the population mean age of pennies in circulation was $\mu = 12.264$ ye
 4a: What is the general research question?
 
 > Insert your answer below.
-
+What is the difference in mean age of coins between 1999 and 2019?
 
 
 4b: What is the population of interest in this study?
 
 > Insert your answer below.
-
+All the pennies in circulation in 2019
 
 
 4c: What is the parameter of interest in this study?
 
 > [insert appropriate symbol here] = [state parameter of interest in words]
 > (Insert your answer below).
-
+    $\mu_1999 - \mu_2019$ = the difference in mean from 2019 and 1999
 
 
 4d: State your null and alternative hypotheses, both symbolically and verbally. Use these symbols and also write out in words your null and alternative hypothesis: $<, >, \neq$,  $H_0$, $H_1$
 Hint:  the symbol part of the null hyp. will be $H_0: \mu = 12.264$  
 
 > Insert your answer below.
-
+$H_0$ = The mean age of coins in 2019 is 12.264  -- \mu_2019 = 12.264
+$H_1$ = The mean age of coins in 2019 is greater than 12.264 -- \mu_2019 != 12.264
 
 
 4e: Fill in the table describing what each symbol represents, whether it represents a parameter or a statistic, and the values of each in this context.
 
 Symbol    | Description        | parameter or statistic? | Value (with units)
 --------- | ------------------ | ----------------------- | ------------------
-$\mu_0$   |                    |                         |          
-$\bar{x}$ |                    |                         |           
-$s$       |                    |                         |           
-$n$       |                    |                         |            
+$\mu_0$   |     pop. mean      |        parameter        |          12.264
+$\bar{x}$ |    sample mean     |        statistic        |          12 
+$s$       |    sample stdev    |        statistic        |          7.515 
+$n$       |    sample size     |        statistic        |          30
 
 
 
 4f: Check the conditions for completing a hypothesis test for a single mean on your data. 
 
-> 1. Random sample: [Met?]; [Justification]  
+> 1. Random sample: Yes; "Randomly Generated pennies generate"  
   2a. Population is normally distributed: No. Move on to 2b.  
-  2b. $n \geq 30$: [Met?]; [Justification]  
-    Conditions for hypothesis test [failed / satisfied]
+  2b. $n \geq 30$: Yes; 30 pennies  
+    Conditions for hypothesis test satisfied
 
 
 4g: Evaluate the likelihood of getting your sample of pennies/coins/whatever if the null hypothesis is true. Use the applet to simulate a null model and determine the likelihood of getting a sample as extreme as your sample mean.  aka find the p-value!
@@ -287,19 +327,19 @@ $n$       |                    |                         |
 - The count in red will display the number of samples out of the samples you simulated which had sample means that were as or more extreme than the sample mean from your sample.  
 
 > Record that proportion below.
-
+4966/10000 (0.4966)
 
 
 4h: Draw another sampling distribution and calculate the likelihood of getting a sample mean as or more extreme than yours. 
 
 > Record that proportion below.
-
+4919/10000 (0.4919)
 
 
 4i: Were the proportions the same? If they were not, explain why. If they were the same, try it a few more times and then explain why  some varied. 
 
 > Insert your answer below.
-
+They were approx. the same.
 
 
 4j: Let's use a model to find our likelihood, instead of an estimated sampling distribution, even though this is fun and using simulations it's quicker/more efficient if we can use our theoretical probability distributions to do our inference (which we can as long as we've checked our conditions to make sure they're satisified to use these to model our data)!  
@@ -311,37 +351,38 @@ $n$       |                    |                         |
 - Click 'Calculate.'  
 
 > Record the standardized test statistic and p-value that is returned.
-
+𝑡 = 0.00
+p = 0.5000
 
 
 4k: Interpret your p-value in the context of the question.
 
-> There is a **[insert p-value]** probability of getting our test statistic of **[insert test statistic]** or more extreme, if the **[write parameter of interest]** is **[insert null value]**. 
+> There is a **0.5** probability of getting our test statistic of **0** or more extreme, if the **true mean** is **12**. 
 
 
 4l: Was your p-value the same as the value you got from your simulation? Why or why not?
 
 > Insert your answer below.
-
+The p-value was very close to the probability calculated in previous parts.
 
 
 4m: Write a specific (using the reject or fail to reject language) and general conclusion (using the p-value and other pieces of evidence from our EDA (descriptive statistics like, graph of your data, one or more of the summary stats form your data, CI's, etc, that back up your conclusion)) about your population citing two pieces of evidence; your hypothesis test/p-value can only be one. 
 
 > Insert your answer below.
-Specific Conclusion (AP):
-General Conclusion:
+Specific Conclusion (AP): We fail to reject the null hypothesis because our p-value is 0.5 showing our sample mean is not very accurate.
+General Conclusion: We fail to reject the null hypothesis based on the evidence.
 
 
 4n: What can you say, in general, about the age of pennies in your population? *(Hint: think both about your hypothesis test, and about the sample you took. Can you generalize?)*
 
 > Insert your answer below.
-
+The mean penny in 2019 is not the same age as the mean penny in 1999
 
 
 4o: To use the model, our conditions from 4f needed to be satisfied. What if you hadn't met those conditions? What would that mean for your conclusion?
 
 > Insert your answer below. 
-
+If we didn't meet the conditions then we cannot make any conclusions.
 
 
 Before you finish -- check your knitted document. Is it easy to read? Do you need to add spaces anywhere to create line breaks? Did you accidentally delete any of the answer formatting, etc?  Get in the habit of always doing this and to remind yourself that you're creating an easy to read awesome Markdown doc when all said and done!
